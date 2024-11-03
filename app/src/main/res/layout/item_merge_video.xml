@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="center"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize4Percents" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvClose"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="4dp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvSwap"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_swap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="4dp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvEdit"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="3.5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_edit"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bevietnampro_regular"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="3.5dp"
+            android:paddingHorizontal="3.5dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:background="@drawable/bg_ic_text_merge_video"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

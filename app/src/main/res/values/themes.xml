@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ST040_MeCut" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="Theme.ST040_MeCut" parent="Base.Theme.ST040_MeCut" />
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percents" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize6Percents" parent="">
+        <item name="cornerSize">6%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize8Percents" parent="">
+        <item name="cornerSize">8%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize16Percents" parent="">
+        <item name="cornerSize">16dp</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize4Percents" parent="">
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <color name="transparent">#00000000</color>
+    <style name="BaseDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

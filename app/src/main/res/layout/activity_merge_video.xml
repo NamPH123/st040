@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/epVideo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/const00raintLayout2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:resize_mode="fit"
+            app:use_controller="false" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="100dp"
+            android:fontFamily="@font/bevietnampro_medium"
+            android:gravity="center"
+            android:text="@string/merge_video"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imvBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imvBack" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvSave"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_save"
+            app:layout_constraintBottom_toBottomOf="@+id/imvBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imvBack" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_thmeme1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/epVideo">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvPlay"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_pause" />
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:fontFamily="@font/bevietnampro_regular"
+                    android:text="@string/total"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/be_vietnapro_bold"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const00raintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.namseox.st040_mecut.view.customview.CustomHorizontalScrollView
+                android:id="@+id/ctv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView4"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView5"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView6"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView7"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView8"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView9"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+
+                    <com.namseox.st040_mecut.view.customview.OptiTimeLineView
+                        android:id="@+id/timeLineView10"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp" />
+                </LinearLayout>
+
+            </com.namseox.st040_mecut.view.customview.CustomHorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/ctv"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:fontFamily="@font/bevietnampro_regular"
+                    android:text="@string/total"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/be_vietnapro_bold"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="75dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="24dp"
+                android:clipToPadding="false"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAdjust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/bevietnampro_medium"
+                android:text="@string/adjust"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/rcv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvTick"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_tick"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/rcv"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <com.namseox.st040_mecut.view.customview.OptiMergeVideo
+                android:id="@+id/otlmv"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="13dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

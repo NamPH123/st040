@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_content_splash">#868686</color>
+    <color name="text_language">#FFFFFF</color>
+    <color name="color_app">#EF9681</color>
+    <color name="bg_rate">#A31F1F1F</color>
+    <color name="bg_stroke_rate">#80FFFFFF</color>
+    <color name="text_title_rate">#ffffff</color>
+    <color name="text_content_rate">#80Ffffff</color>
+    <color name="text_rate_rate">#ffffff</color>
+    <color name="text_exit_rate">#ffffff</color>
+
+    <color name="startColor">#FFB951</color>
+    <color name="endColor">#CE50E0</color>
+    <color name="colorAccent">#BFFFFFFF</color>
+    <color name="_535353">#535353</color>
+    <color name="color_transparen">#66000000</color>
+</resources>

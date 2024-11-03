@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="2dp"
+            android:background="@color/white"
+            android:layout_centerHorizontal="true"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percents" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bgFill"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_fill_filter"
+            android:layout_alignStart="@id/imv"
+            android:layout_alignTop="@id/imv"
+            android:layout_alignEnd="@id/imv"
+            android:layout_alignBottom="@id/imv"
+            android:visibility="gone"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percents"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:textColor="#66FFFFFF"
+            android:textSize="12sp"
+            android:fontFamily="@font/bevietnampro_regular"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/imv"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</layout>

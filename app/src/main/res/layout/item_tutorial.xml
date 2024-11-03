@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mTutorialModel"
+            type="com.namseox.st040_mecut.data.model.TutorialModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imv"
+            setBG="@{mTutorialModel.bg}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/lemon"
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center"
+                android:text="@{mTutorialModel.title}"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:lines="2"/>
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tv2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                android:fontFamily="@font/satoshi_regular"-->
+<!--                android:gravity="center|top"-->
+<!--                android:text="@{mTutorialModel.text}"-->
+<!--                android:textColor="#80FFFFFF"-->
+<!--                android:textSize="14sp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:paddingHorizontal="24dp"/>-->
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>
