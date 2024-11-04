@@ -426,7 +426,7 @@ class EditVideoActivcity : AbsBaseActivity<ActivityEditVideoBinding>(false) {
                             Log.d(TAG, "onClicked______: ${arrStikerView[positionHome].getCurrentSticker()!!.character}")
                             binding.tvEdit.setText(arrStikerView[positionHome].getCurrentSticker()!!.character)
                             binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbTextSize).progress = arrStikerView[positionHome].getCurrentSticker()!!.textSize.toInt()
-                            binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress = arrStikerView[positionHome].getCurrentSticker()!!.alpha.toInt()*100
+                            binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress = arrStikerView[positionHome].getCurrentSticker()!!.alpha.toInt()
                             binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbMargin).progress = arrStikerView[positionHome].getCurrentSticker()!!.margin.toInt()*100
 
                         }
@@ -532,8 +532,8 @@ class EditVideoActivcity : AbsBaseActivity<ActivityEditVideoBinding>(false) {
 
             }
         })
-        binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress
-        binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbMargin).progress
+//        binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress
+//        binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbMargin).progress
         adapterTextSticker.onClick = {pos->
             Glide.with(applicationContext).asDrawable().load(arrTextStiker[pos].imv1)
                 .into(object : CustomTarget<Drawable>() {
@@ -965,11 +965,11 @@ class EditVideoActivcity : AbsBaseActivity<ActivityEditVideoBinding>(false) {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun addText() {
         val textView = TextView(applicationContext).apply {
-            this.text = binding.tvEdit.text
+            this.text = binding.tvEdit.text.toString() + " "
             this.textSize = binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbTextSize).progress.toFloat()
-            this.alpha = binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress.toFloat()/100
             this.letterSpacing = binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbMargin).progress.toFloat()/100
             this.typeface = binding.tvEdit.typeface
             if (arrStikerView[positionHome].getCurrentSticker() != null && arrStikerView[positionHome].getCurrentSticker()!!.checkText) {
@@ -983,9 +983,9 @@ class EditVideoActivcity : AbsBaseActivity<ActivityEditVideoBinding>(false) {
                 )
             }
             this.setShadowLayer(
-                20f, // Shadow radius
-                10f, // X offset
-                10f, // Y offset
+                10f, // Shadow radius
+                binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress.toFloat(), // X offset
+                binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress.toFloat(), // Y offset
                 Color.WHITE // Shadow color
             )
             this.setTextColor(Color.parseColor("#ffffff"))
@@ -1019,7 +1019,7 @@ class EditVideoActivcity : AbsBaseActivity<ActivityEditVideoBinding>(false) {
             true,
             binding.tvEdit.text.toString(),
             binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbTextSize).progress.toFloat(),
-            binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress.toFloat()/100,
+            binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbApha).progress.toFloat(),
             binding.layoutText.findViewById<AppCompatSeekBar>(R.id.sbMargin).progress.toFloat()/100
         )
     }
